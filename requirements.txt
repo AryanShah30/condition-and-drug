@@ -1,2 +1,5 @@
 nltk==3.6.5
-beautifulsoup4==4.10.0
+streamlit~=1.36.0
+pandas~=2.2.2
+beautifulsoup4~=4.12.3
+scikit-learn==0.24.2

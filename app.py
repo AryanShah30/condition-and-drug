@@ -11,8 +11,8 @@ import re
 df = pd.read_csv("drugsComTrain.csv")
 
 # Load the prediction model and vectorizer
-prediction_model = pickle.load(open("D:/Internship - Natural Language Processing/Classification of Patient's Condition/patient_classification.sav", "rb"))
-prediction_vec_model = pickle.load(open("D:/Internship - Natural Language Processing/Classification of Patient's Condition/tfidf_vectorizer_3.sav", "rb"))
+prediction_model = pickle.load(open("patient_classification.sav", "rb"))
+prediction_vec_model = pickle.load(open("tfidf_vectorizer_3.sav", "rb"))
 
 # Streamlit application
 st.set_page_config(page_title="Condition & Drug", page_icon="💊", layout="wide")

@@ -1,11 +1,11 @@
 import pickle
 import streamlit as st
 import pandas as pd
+import nltk
 from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
 from bs4 import BeautifulSoup
 import re
-import nltk
 
 # Load the dataset
 df = pd.read_csv("C:/Users/aryan/Downloads/Datasets/drugsComTrain.csv")

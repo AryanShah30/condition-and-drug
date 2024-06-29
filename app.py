@@ -1,3 +1,10 @@
+import subprocess
+
+def install_dependencies():
+    subprocess.check_call(["pip", "install", "-r", "requirements.txt"])
+
+install_dependencies()
+
 import pickle
 import streamlit as st
 import pandas as pd

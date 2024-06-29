@@ -1,21 +1,23 @@
 import pickle
 import streamlit as st
 import pandas as pd
-import nltk
-from nltk.corpus import stopwords
-from nltk.stem import WordNetLemmatizer
-from bs4 import BeautifulSoup
-import re
-
-# Load the dataset
 import os
 
+# Load the dataset
 file_path = os.path.join(os.path.dirname(__file__), "drugsComTrain.csv")
 df = pd.read_csv(file_path)
 
 # Load the prediction model and vectorizer
-prediction_model = pickle.load(open("patient_classification.sav", "rb"))
-prediction_vec_model = pickle.load(open("tfidf_vectorizer_3.sav", "rb"))
+model_path = os.path.join(os.path.dirname(__file__), "patient_classification.sav")
+vectorizer_path = os.path.join(os.path.dirname(__file__), "tfidf_vectorizer_3.sav")
+
+try:
+    prediction_model = pickle.load(open(model_path, "rb"))
+    prediction_vec_model = pickle.load(open(vectorizer_path, "rb"))
+except FileNotFoundError:
+    st.error(f"Error: Model file not found. Please check if '{model_path}' and '{vectorizer_path}' exist.")
+except Exception as e:
+    st.error(f"Error loading model: {e}")
 
 # Streamlit application
 st.set_page_config(page_title="Condition & Drug", page_icon="💊", layout="wide")

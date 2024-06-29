@@ -8,7 +8,10 @@ from bs4 import BeautifulSoup
 import re
 
 # Load the dataset
-df = pd.read_csv("drugsComTrain.csv")
+import os
+
+file_path = os.path.join(os.path.dirname(__file__), "drugsComTrain.csv")
+df = pd.read_csv(file_path)
 
 # Load the prediction model and vectorizer
 prediction_model = pickle.load(open("patient_classification.sav", "rb"))

@@ -2,7 +2,6 @@ import pickle
 import streamlit as st
 import pandas as pd
 import os
-import sklearn
 
 # Load the dataset
 file_path = os.path.join(os.path.dirname(__file__), "drugsComTrain.csv")

@@ -11,13 +11,8 @@ df = pd.read_csv(file_path)
 model_path = os.path.join(os.path.dirname(__file__), "patient_classification.sav")
 vectorizer_path = os.path.join(os.path.dirname(__file__), "tfidf_vectorizer_3.sav")
 
-try:
-    prediction_model = pickle.load(open(model_path, "rb"))
-    prediction_vec_model = pickle.load(open(vectorizer_path, "rb"))
-except FileNotFoundError:
-    st.error(f"Error: Model file not found. Please check if '{model_path}' and '{vectorizer_path}' exist.")
-except Exception as e:
-    st.error(f"Error loading model: {e}")
+prediction_model = pickle.load(open(model_path, "rb"))
+prediction_vec_model = pickle.load(open(vectorizer_path, "rb"))
 
 # Streamlit application
 st.set_page_config(page_title="Condition & Drug", page_icon="💊", layout="wide")

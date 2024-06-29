@@ -2,7 +2,8 @@ nltk==3.6.5
 streamlit~=1.36.0
 pandas~=2.2.2
 beautifulsoup4~=4.12.3
-scikit-learn==0.24.2
 pip==24.1.1
 numpy==1.20.0
+Cython>=0.29
+scikit-learn>=0.24
 

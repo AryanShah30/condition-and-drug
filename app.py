@@ -1,7 +1,11 @@
 import subprocess
 
 def install_dependencies():
-    subprocess.check_call(["pip", "install", "-r", "requirements.txt"])
+    try:
+        subprocess.check_call(["pip", "install", "-r", "requirements.txt"])
+    except subprocess.CalledProcessError as e:
+        print(f"Error during pip install: {e}")
+        raise
 
 install_dependencies()
 

@@ -5,10 +5,6 @@ import os
 
 # Load the dataset
 file_path = os.path.join(os.path.dirname(__file__), "drugsComTrain.csv")
-if not os.path.exists(file_path):
-    st.error(f"Dataset file '{file_path}' not found.")
-    st.stop()
-
 df = pd.read_csv(file_path)
 
 # Load the prediction model and vectorizer

@@ -30,6 +30,7 @@ st.markdown("""
         Last updated on 25/06/2024.
     </div>
     """, unsafe_allow_html=True)
+st.markdown("---")
 st.write("""
 This tool helps you by predicting your medical condition based on a description of your symptoms. 
 Currently, it supports the following conditions:

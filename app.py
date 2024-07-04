@@ -27,7 +27,7 @@ st.set_page_config(page_title="Condition & Drug", page_icon="💊", layout="wide
 st.title("Patient Condition Classification and Drug Recommendation")
 st.markdown("""
     <div style='color: gray; font-size: 15px;'>
-        Last updated on 29/06/2024.
+        Last updated on 25/06/2024.
     </div>
     """, unsafe_allow_html=True)
 st.write("""

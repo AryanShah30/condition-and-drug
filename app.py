@@ -25,6 +25,11 @@ except Exception as e:
 # Streamlit application
 st.set_page_config(page_title="Condition & Drug", page_icon="💊", layout="wide")
 st.title("Patient Condition Classification and Drug Recommendation")
+st.markdown("""
+    <div style='color: gray; font-size: 15px;'>
+        Last updated on 29/06/2024.
+    </div>
+    """, unsafe_allow_html=True)
 st.write("""
 This tool helps you by predicting your medical condition based on a description of your symptoms. 
 Currently, it supports the following conditions:

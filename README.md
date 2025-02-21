@@ -26,7 +26,7 @@ This project is a high-accuracy (98.6%) patient condition classification and dru
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/patient-condition-classification.git
+   git clone https://github.com/AryanShah30/patient-condition-classification.git
    cd patient-condition-classification
    ```
 
